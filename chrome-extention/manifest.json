@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Sentiment Analyzer",
+  "version": "1.0",
+  "description": "Analyze YouTube comments sentiment using your FastAPI backend.",
+  
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "http://127.0.0.1:8000/*"
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Sentiment Analyzer"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

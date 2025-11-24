@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Sentiment Analyzer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <h1>YouTube Sentiment</h1>
+
+    <input type="text" id="apiUrl" placeholder="API URL" value="http://127.0.0.1:8000">
+    <button id="analyzeBtn">Analyze Comments</button>
+    <div id="loading" style="display:none">Loading...</div>
+    <div id="error" style="display:none;color:red;"></div>
+
+    <div id="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="1">Positive</button>
+        <button class="filter-btn" data-filter="0">Neutral</button>
+        <button class="filter-btn" data-filter="-1">Negative</button>
+    </div>
+
+    <div id="results" style="display:none">
+        <div id="stats">
+            Positive: <span id="positiveCount">0</span> (<span id="positivePercent">0%</span>)<br>
+            Neutral: <span id="neutralCount">0</span> (<span id="neutralPercent">0%</span>)<br>
+            Negative: <span id="negativeCount">0</span> (<span id="negativePercent">0%</span>)
+        </div>
+        <div id="commentsList"></div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

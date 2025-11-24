@@ -1,0 +1,68 @@
+body {
+  width: 350px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#apiUrl {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 6px;
+  box-sizing: border-box;
+}
+
+#analyzeBtn {
+  width: 100%;
+  padding: 8px;
+  background: #ff0000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+#loading {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#filters {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.filter-btn {
+  padding: 5px 10px;
+  margin: 0 2px;
+  border: 1px solid #ccc;
+  background: #f0f0f0;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.filter-btn.active {
+  background: #ff0000;
+  color: white;
+}
+
+#commentsList {
+  font-size: 14px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.comment-item {
+  border-bottom: 1px solid #ddd;
+  padding: 4px 0;
+}
+
+.comment-item.1 { color: green; }
+.comment-item.0 { color: gray; }
+.comment-item.-1 { color: red; }
