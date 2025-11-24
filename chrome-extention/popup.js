@@ -44,7 +44,7 @@ async function analyzeComments() {
 
         if (!result || result.length === 0) throw new Error('No comments found. Scroll to load more comments.');
 
-        const apiUrl = "http://127.0.0.1:8000/predict_batch"; // your backend URL
+        const apiUrl = "https://d0senzy-YoutubeFeels.hf.space/predict_batch"; // your backend URL
         const response = await fetch(apiUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
